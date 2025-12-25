@@ -3,3 +3,7 @@ body{
     padding: 0;
   border-style: border-box;
 }
+
+.container{
+    display: flex;
+    flex-direction: column;

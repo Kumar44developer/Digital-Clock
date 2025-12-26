@@ -16,4 +16,6 @@ function updateClock(){
     hoursElement.textContent = hours;
     minutesElement.textContent = minutes;
     
+    secondsElement.textContent = seconds;
 
+}

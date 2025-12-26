@@ -37,6 +37,9 @@ h1{
 .clock{
     padding: 25px;
     display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
 
 

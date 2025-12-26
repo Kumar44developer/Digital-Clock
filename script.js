@@ -13,5 +13,7 @@ function updateClock(){
     const minutesElement = document.getElementById("minutes");
     const secondsElement = document.getElementById("seconds");
 
+    hoursElement.textContent = hours;
+    minutesElement.textContent = minutes;
     
 

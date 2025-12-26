@@ -9,3 +9,7 @@ function updateClock(){
     minutes = minutes < 10 ? "0" + minutes : minutes;
     seconds = seconds < 10 ? "0" + seconds : seconds;
 
+    const hoursElement = document.getElementById("hours");
+    const minutesElement = document.getElementById("minutes");
+    
+

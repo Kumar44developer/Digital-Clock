@@ -34,7 +34,9 @@ h1{
 
 }
 
-
+.clock{
+    padding: 25px;
+    display: flex;
 
 
 

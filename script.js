@@ -19,3 +19,5 @@ function updateClock(){
     secondsElement.textContent = seconds;
 
 }
+
+setInterval(updateClock,1000);

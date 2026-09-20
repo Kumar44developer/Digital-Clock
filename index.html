@@ -4,22 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Clock</title>
+    <title>Digital Clock Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
+    <div class="container">
         <div class="card">
-            <h1>Digital Clock</h1>
-            <div class="clock">
-                <span class="time-element" id ="hours">00</span>
-                <span class="colon-element">:</span>
-                <span class="time-element" id="minutes">00</span>
-                <span class="colon-element">:</span>
-                <span class="time-element" id="seconds">00</span>
+            <div class="card-header">
+                <div class="badge-dot"></div>
+                <h1>Digital Clock</h1>
+                <span class="live-tag">LIVE</span>
             </div>
-            </div>   
+
+            <div class="date-container">
+                <span id="date-display" class="date-text">Loading date...</span>
+            </div>
+
+            <div class="clock-wrapper">
+                <div class="clock">
+                    <div class="time-block">
+                        <span class="time-element" id="hours">00</span>
+                        <span class="time-label">HOURS</span>
+                    </div>
+                    <span class="colon-element blink">:</span>
+                    <div class="time-block">
+                        <span class="time-element" id="minutes">00</span>
+                        <span class="time-label">MINUTES</span>
+                    </div>
+                    <span class="colon-element blink">:</span>
+                    <div class="time-block">
+                        <span class="time-element" id="seconds">00</span>
+                        <span class="time-label">SECONDS</span>
+                    </div>
+                    <span class="ampm-element" id="ampm">AM</span>
+                </div>
+            </div>
+
+            <div class="timezone-bar">
+                <svg class="tz-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                <span id="timezone-display">Detecting timezone...</span>
+            </div>
+
+            <div class="controls-toolbar">
+                <button id="formatToggleBtn" class="control-btn" type="button" aria-label="Toggle 12/24 hour format">Format: 24-Hour</button>
+                <button id="blinkToggleBtn" class="control-btn" type="button" aria-label="Toggle colon blinking">Blink: ON</button>
+                <button id="copyTimeBtn" class="control-btn accent-btn" type="button" aria-label="Copy current time">Copy Time</button>
+            </div>
+        </div>
+
+        <div id="toast" class="toast">Time copied to clipboard!</div>
     </div>
-    <script src="script.js"></script>   
+    <script src="script.js"></script>
 </body>
 </html>

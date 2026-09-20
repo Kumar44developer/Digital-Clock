@@ -53,13 +53,13 @@ graph TD
 
 ```text
 Digital-Clock/
-├── .gitignore          Standard Git exclusion patterns
-├── index.html          Semantic markup with glassmorphism container
-├── README.md           Startup documentation and architecture specification
-├── script.js           Time computation logic, event handlers, and exports
-├── style.css           Responsive stylesheet, CSS custom properties, and animations
+├── .gitignore        
+├── index.html        
+├── README.md          
+├── script.js         
+├── style.css          
 └── tests/
-    └── test_clock.js   Unit test suite for time formatting and calendar logic
+    └── test_clock.js  
 ```
 
 ---
